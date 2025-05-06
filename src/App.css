@@ -1,0 +1,9 @@
+.haptic-link {
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  
+  .haptic-link:hover {
+    color: rgb(156, 156, 156);
+  }  
