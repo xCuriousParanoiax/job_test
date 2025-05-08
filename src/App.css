@@ -1,12 +1,48 @@
-  .hero {
-    position: relative;
-    font-size: 12px;
-    font-family: sans-serif;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    width: 374px;
+  html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .main-layout {
+    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
+  }
+
+  .top-half {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+  }  
+
+  .hero-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 24px; /* adjust spacing if needed */
+  }
+
+  .bottom-half {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero {
+      position: relative;
+      font-size: 12px;
+      font-family: sans-serif;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      width: 374px;
+      display: flex;
+      flex-direction: column;
   }
 
   .hero-copy {
@@ -75,8 +111,7 @@
   .carousel-card {
     position: relative;
     width: 240px;
-    height: 452px;
-    overflow: hidden;
+    height: 292px;
   }
 
   .carousel-card img,
@@ -92,7 +127,7 @@
     top: auto;
     left: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: auto;
     gap: 4px;
     padding: 8px 0;
     pointer-events: none;
@@ -105,15 +140,22 @@
 
   .meta-text h4 {
     margin: 0;
-    font: 600 15px/1 "SF Pro Display", Helvetica, sans-serif;
+    font: 600 12px/1 "SF Pro Display", Helvetica, sans-serif;
     color: #000;
   }
 
   .meta-text span {
     margin: 0;
-    font: 400 13px/1 "SF Pro Display", Helvetica, sans-serif;
+    font: 400 12px/1 "SF Pro Display", Helvetica, sans-serif;
     opacity: 0.6;
   }
+
+  .meta-logo-placeholder {
+    width: 32px;
+    height: 32px;
+    background-color: #ddd; /* light gray placeholder */
+    flex-shrink: 0;
+  }  
 
   @keyframes scroll-left {
     0%   { transform: translateX(0); }
